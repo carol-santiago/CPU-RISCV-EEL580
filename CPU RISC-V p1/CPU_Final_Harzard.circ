@@ -1271,6 +1271,19 @@ BEGIN
 			read1Out  &lt;= idex_s(63 DOWNTO 32);      -- Coloca na saída o valor lido do registrador 1
 			read2Out  &lt;= idex_s(95 DOWNTO 64);      -- Coloca na saída o valor lido do registrador 2
 			immGenOut &lt;= idex_s(127 DOWNTO 96);     -- Coloca na saída
+			aluControlout &lt;= idex_s(131 DOWNTO 128);
+			wbAddOut &lt;= idex_s(136 DOWNTO 132);
+			WBout &lt;= idex_s(139 downto 137);
+			Mout &lt;= idex_s(145 downto 140);
+			EXout &lt;= idex_s(149 downto 146);
+			pcPl4Out &lt;= idex_s(181 downto 150);
+			rs1Out &lt;= idex_s(186 downto 182);
+			rs2Out &lt;= idex_s(191 downto 187);
+		END IF;
+	END PROCESS;
+
+	
+END TypeArchitecture;
 </vhdl>
   <vhdl name="EXMEM">LIBRARY ieee;
 USE ieee.std_logic_1164.all;
